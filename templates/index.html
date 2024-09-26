@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Walk Tracker</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmhEiuwQ1N3yFtSVQgb6MF7gGpY4drzuM"></script>
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+        #stepCounter {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Walk and Step Tracker</h1>
+
+    <button id="startBtn">Start Walk</button>
+    <button id="pauseBtn" style="display:none;">Pause Walk</button>
+    <button id="resumeBtn" style="display:none;">Resume Walk</button>
+    <button id="stopBtn" style="display:none;">Stop Walk</button>
+
+    <div id="map"></div>
+    <div id="stepCounter">Steps: 0</div> <!-- 걸음 수를 표시 -->
+
+    <script src="{{ url_for('static', filename='js/map.js') }}"></script>
+</body>
+</html>
